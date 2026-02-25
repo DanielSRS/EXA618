@@ -1,0 +1,9 @@
+[project]
+name = "atividade-01"
+version = "0.1.0"
+description = "Primeira atividade de programação de redes"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "requests>=2.32.5",
+]
