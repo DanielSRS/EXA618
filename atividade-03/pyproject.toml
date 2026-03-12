@@ -1,0 +1,7 @@
+[project]
+name = "atividade-03"
+version = "0.0.1"
+description = "XML parser"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
