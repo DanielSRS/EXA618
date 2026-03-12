@@ -1,641 +1,795 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Some info of myself</title>
-    <style>
+
+<head>
+  <title>Some info of myself</title>
+  <style>
+    body {
+      background-color: #fff;
+    }
+
+    @media (prefers-color-scheme: dark) {
       body {
-        background-color: #fff;
+        background-color: #111;
       }
-      @media (prefers-color-scheme: dark) {
-        body {
-          background-color: #111;
-        }
-      }
-    </style>
-  </head>
-  <body style="width: 100vw; height: 100vh; display: flex; flex-direction: column;">
+    }
+  </style>
+</head>
 
-    <div style="display: flex; flex: 1; min-height: 500px; overflow-y: scroll;">
+<body style="width: 100vw; height: 100vh; display: flex; flex-direction: column;">
 
-      <svg
-        fill="none"
-        width="100%"
-        height="100%"
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <foreignObject width="100%" height="100%">
+  <div style="display: flex; flex: 1; min-height: 500px; overflow-y: scroll;">
+
+    <svg fill="none" width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <foreignObject width="100%" height="100%">
         <html xmlns="http://www.w3.org/1999/xhtml">
-          <script type="text/javascript">
-            <![CDATA[
-              console.log("Meu nome não é JOHNNY");
-            ]]>
-          </script>
-          <!-- Styles reset -->
-          <style>
-            html, body, div, span, applet, object, iframe,
-            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-            a, abbr, acronym, address, big, cite, code,
-            del, dfn, em, img, ins, kbd, q, s, samp,
-            small, strike, strong, sub, sup, tt, var,
-            b, u, i, center,
-            dl, dt, dd, ol, ul, li,
-            fieldset, form, label, legend,
-            table, caption, tbody, tfoot, thead, tr, th, td,
-            article, aside, canvas, details, embed, 
-            figure, figcaption, footer, header, hgroup, 
-            menu, nav, output, ruby, section, summary,
-            time, mark, audio, video {
-              /*margin: 0;*/
-              padding: 0;
-              border: 0;
-              font-size: 100%;
-              font: inherit;
-              vertical-align: baseline;
-            }
-            /* HTML5 display-role reset for older browsers */
-            article, aside, details, figcaption, figure, 
-            footer, header, hgroup, menu, nav, section {
-              display: block;
-            }
-            body {
-              line-height: 1;
-            }
-            ol, ul {
-              list-style: none;
-            }
-            blockquote, q {
-              quotes: none;
-            }
-            blockquote:before, blockquote:after,
-            q:before, q:after {
-              content: '';
-              content: none;
-            }
-            table {
-              border-collapse: collapse;
-              border-spacing: 0;
-            }
-          </style>
+        <script type="text/javascript">
+            < ![CDATA[
+            console.log("Meu nome não é JOHNNY");
+          ]]>
+        </script>
+        <!-- Styles reset -->
+        <style>
+          html,
+          body,
+          div,
+          span,
+          applet,
+          object,
+          iframe,
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6,
+          p,
+          blockquote,
+          pre,
+          a,
+          abbr,
+          acronym,
+          address,
+          big,
+          cite,
+          code,
+          del,
+          dfn,
+          em,
+          img,
+          ins,
+          kbd,
+          q,
+          s,
+          samp,
+          small,
+          strike,
+          strong,
+          sub,
+          sup,
+          tt,
+          var,
+          b,
+          u,
+          i,
+          center,
+          dl,
+          dt,
+          dd,
+          ol,
+          ul,
+          li,
+          fieldset,
+          form,
+          label,
+          legend,
+          table,
+          caption,
+          tbody,
+          tfoot,
+          thead,
+          tr,
+          th,
+          td,
+          article,
+          aside,
+          canvas,
+          details,
+          embed,
+          figure,
+          figcaption,
+          footer,
+          header,
+          hgroup,
+          menu,
+          nav,
+          output,
+          ruby,
+          section,
+          summary,
+          time,
+          mark,
+          audio,
+          video {
+            /*margin: 0;*/
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+          }
 
-          <!-- content style -->
-          <style>
-            @import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
+          /* HTML5 display-role reset for older browsers */
+          article,
+          aside,
+          details,
+          figcaption,
+          figure,
+          footer,
+          header,
+          hgroup,
+          menu,
+          nav,
+          section {
+            display: block;
+          }
 
+          body {
+            line-height: 1;
+          }
+
+          ol,
+          ul {
+            list-style: none;
+          }
+
+          blockquote,
+          q {
+            quotes: none;
+          }
+
+          blockquote:before,
+          blockquote:after,
+          q:before,
+          q:after {
+            content: '';
+            content: none;
+          }
+
+          table {
+            border-collapse: collapse;
+            border-spacing: 0;
+          }
+        </style>
+
+        <!-- content style -->
+        <style>
+          @import url('https://fonts.cdnfonts.com/css/jetbrains-mono-2');
+
+          :root {
+            --font-family: "JetBrains Mono", monospace;
+            --line-height: 1.20rem;
+            --border-thickness: 2px;
+            --text-color: #000;
+            --text-color-alt: #666;
+            --background-color: #fff;
+            --background-color-alt: #eee;
+
+            --font-weight-normal: 500;
+            --font-weight-medium: 600;
+            --font-weight-bold: 800;
+
+            font-family: var(--font-family);
+            font-optical-sizing: auto;
+            font-weight: var(--font-weight-normal);
+            font-style: normal;
+            font-variant-numeric: tabular-nums lining-nums;
+            font-size: 16px;
+          }
+
+          @media (prefers-color-scheme: dark) {
             :root {
-              --font-family: "JetBrains Mono", monospace;
-              --line-height: 1.20rem;
-              --border-thickness: 2px;
-              --text-color: #000;
-              --text-color-alt: #666;
-              --background-color: #fff;
-              --background-color-alt: #eee;
-
-              --font-weight-normal: 500;
-              --font-weight-medium: 600;
-              --font-weight-bold: 800;
-
-              font-family: var(--font-family);
-              font-optical-sizing: auto;
-              font-weight: var(--font-weight-normal);
-              font-style: normal;
-              font-variant-numeric: tabular-nums lining-nums;
-              font-size: 16px;
+              --text-color: #fff;
+              --text-color-alt: #aaa;
+              --background-color: #000;
+              --background-color-alt: #111;
             }
 
-            @media (prefers-color-scheme: dark) {
-              :root {
-                --text-color: #fff;
-                --text-color-alt: #aaa;
-                --background-color: #000;
-                --background-color-alt: #111;
-              }
-              .hideOnDarkMode {
-                display: none;
-              }
+            .hideOnDarkMode {
+              display: none;
             }
-            @media (prefers-color-scheme: light) {
-              .hideOnLightMode {
-                display: none;
-              }
-            }
+          }
 
-            * {
-              box-sizing: border-box;
+          @media (prefers-color-scheme: light) {
+            .hideOnLightMode {
+              display: none;
             }
+          }
+
+          * {
+            box-sizing: border-box;
+          }
 
 
-            * + * {
-              margin-top: var(--line-height);
-            }
+          *+* {
+            margin-top: var(--line-height);
+          }
 
-            html {
-              display: flex;
-              width: 100%;
-              margin: 0;
-              padding: 0;
-              flex-direction: column;
-              align-items: center;
-              /**
+          html {
+            display: flex;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+            align-items: center;
+            /**
               background: var(--background-color);
               **/
-              color: var(--text-color);
+            color: var(--text-color);
+          }
+
+          body {
+            position: relative;
+            width: 100%;
+            margin: 0;
+            max-width: calc(min(80ch, round(down, 100%, 1ch)));
+            line-height: var(--line-height);
+            overflow-x: hidden;
+          }
+
+          @media screen and (max-width: 480px) {
+            :root {
+              font-size: 14px;
             }
 
-            body {
-              position: relative;
-              width: 100%;
-              margin: 0;
-              max-width: calc(min(80ch, round(down, 100%, 1ch)));
-              line-height: var(--line-height);
-              overflow-x: hidden;
-            }
+            body {}
+          }
 
-            @media screen and (max-width: 480px) {
-              :root {
-                font-size: 14px;
-              }
-              body {
-                
-              }
-            }
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            font-weight: var(--font-weight-bold);
+            margin: calc(var(--line-height) * 2) 0 var(--line-height);
+            line-height: var(--line-height);
+          }
 
-            h1, h2, h3, h4, h5, h6 {
-              font-weight: var(--font-weight-bold);
-              margin: calc(var(--line-height) * 2) 0 var(--line-height);
-              line-height: var(--line-height);
-            }
+          h1 {
+            font-size: 2rem;
+            line-height: calc(2 * var(--line-height));
+            margin-bottom: calc(var(--line-height) * 2);
+            text-transform: uppercase;
+          }
 
-            h1 {
-              font-size: 2rem;
-              line-height: calc(2 * var(--line-height));
-              margin-bottom: calc(var(--line-height) * 2);
-              text-transform: uppercase;
-            }
-            h2 {
-              font-size: 1rem;
-              text-transform: uppercase;
-            }
+          h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+          }
 
-            hr {
-              position: relative;
-              display: block;
-              height: var(--line-height);
-              margin: calc(var(--line-height) * 1.5) 0;
-              border: none;
-              color: var(--text-color);
-            }
-            hr:after {
-              display: block;
-              content: "";
-              position: absolute;
-              top: calc(var(--line-height) / 2 - var(--border-thickness));
-              left: 0;
-              width: 100%;
-              border-top: calc(var(--border-thickness) * 3) double var(--text-color);
-              height: 0;
-            }
+          hr {
+            position: relative;
+            display: block;
+            height: var(--line-height);
+            margin: calc(var(--line-height) * 1.5) 0;
+            border: none;
+            color: var(--text-color);
+          }
 
-            a {
-              text-decoration-thickness: var(--border-thickness);
-            }
+          hr:after {
+            display: block;
+            content: "";
+            position: absolute;
+            top: calc(var(--line-height) / 2 - var(--border-thickness));
+            left: 0;
+            width: 100%;
+            border-top: calc(var(--border-thickness) * 3) double var(--text-color);
+            height: 0;
+          }
 
-            a:link, a:visited {
-              color: var(--text-color);
-            }
+          a {
+            text-decoration-thickness: var(--border-thickness);
+          }
 
-            p {
-              margin-bottom: var(--line-height);
-            }
+          a:link,
+          a:visited {
+            color: var(--text-color);
+          }
 
-            strong {
-              font-weight: var(--font-weight-bold);
-            }
-            em {
-              font-style: italic;
-            }
+          p {
+            margin-bottom: var(--line-height);
+          }
 
-            sub {
-              position: relative;
-              display: inline-block;
-              margin: 0;
-              vertical-align: sub;
-              line-height: 0;
-              width: calc(1ch / 0.75);
-              font-size: .75rem;
-            }
+          strong {
+            font-weight: var(--font-weight-bold);
+          }
 
-            table {
-              position: relative;
-              top: calc(var(--line-height) / 2);
-              width: calc(round(down, 100%, 1ch));
-              border-collapse: collapse;
-              margin: 0 0 calc(var(--line-height) * 2);
-            }
+          em {
+            font-style: italic;
+          }
 
-            th, td {
-              border: var(--border-thickness) solid var(--text-color);
-              padding: 
-                calc((var(--line-height) / 2))
-                calc(1ch - var(--border-thickness) / 2)
-                calc((var(--line-height) / 2) - (var(--border-thickness)))
-              ;
-              line-height: var(--line-height);
-              vertical-align: top;
-              text-align: left;
-            }
-            table tbody tr:first-child > * {
-              padding-top: calc((var(--line-height) / 2) - var(--border-thickness));
-            }
+          sub {
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            vertical-align: sub;
+            line-height: 0;
+            width: calc(1ch / 0.75);
+            font-size: .75rem;
+          }
+
+          table {
+            position: relative;
+            top: calc(var(--line-height) / 2);
+            width: calc(round(down, 100%, 1ch));
+            border-collapse: collapse;
+            margin: 0 0 calc(var(--line-height) * 2);
+          }
+
+          th,
+          td {
+            border: var(--border-thickness) solid var(--text-color);
+            padding:
+              calc((var(--line-height) / 2)) calc(1ch - var(--border-thickness) / 2) calc((var(--line-height) / 2) - (var(--border-thickness)));
+            line-height: var(--line-height);
+            vertical-align: top;
+            text-align: left;
+          }
+
+          table tbody tr:first-child>* {
+            padding-top: calc((var(--line-height) / 2) - var(--border-thickness));
+          }
 
 
-            th {
-              font-weight: 700;
-            }
-            .width-min {
-              width: 0%;
-            }
-            .width-auto {
-              width: 100%;
-            }
+          th {
+            font-weight: 700;
+          }
 
-            .header {
-              margin-bottom: calc(var(--line-height) * 2);
-            }
-            .header h1 {
-              margin: 0;
-            }
-            .header tr td:last-child {
-              text-align: right;
-            }
+          .width-min {
+            width: 0%;
+          }
 
-            p {
-              word-break: break-word;
-              word-wrap: break-word;
-              hyphens: auto;
-            }
+          .width-auto {
+            width: 100%;
+          }
 
-            img, video {
-              display: block;
-              width: 100%;
-              object-fit: contain;
-              overflow: hidden;
-            }
-            img {
-              font-style: italic;
-              color: var(--text-color-alt);
-            }
+          .header {
+            margin-bottom: calc(var(--line-height) * 2);
+          }
 
-            details {
-              border: var(--border-thickness) solid var(--text-color);
-              padding: calc(var(--line-height) - var(--border-thickness)) 1ch;
-              margin-bottom: var(--line-height);
-            }
+          .header h1 {
+            margin: 0;
+          }
 
-            summary {
-              font-weight: var(--font-weight-medium);
-              cursor: pointer;
-            }
-            details[open] summary {
-              margin-bottom: var(--line-height);
-            }
+          .header tr td:last-child {
+            text-align: right;
+          }
 
-            details ::marker {
-              display: inline-block;
-              content: '▶';
-              margin: 0;
-            }
-            details[open] ::marker {
-              content: '▼';
-            }
+          p {
+            word-break: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+          }
 
-            details :last-child {
-              margin-bottom: 0;
-            }
+          img,
+          video {
+            display: block;
+            width: 100%;
+            object-fit: contain;
+            overflow: hidden;
+          }
 
-            pre {
-              white-space: pre;
-              overflow-x: auto;
-              margin: var(--line-height) 0;
-              overflow-y: hidden;
-            }
-            figure pre {
-              margin: 0;
-            }
+          img {
+            font-style: italic;
+            color: var(--text-color-alt);
+          }
 
-            pre, code {
-              font-family: var(--font-family);
-            }
+          details {
+            border: var(--border-thickness) solid var(--text-color);
+            padding: calc(var(--line-height) - var(--border-thickness)) 1ch;
+            margin-bottom: var(--line-height);
+          }
 
-            code {
-              font-weight: var(--font-weight-medium);
-            }
+          summary {
+            font-weight: var(--font-weight-medium);
+            cursor: pointer;
+          }
 
-            figure {
-              margin: calc(var(--line-height) * 2) 3ch;
-              overflow-x: auto;
-              overflow-y: hidden;
-            }
+          details[open] summary {
+            margin-bottom: var(--line-height);
+          }
 
-            figcaption {
-              display: block;
-              font-style: italic;
-              margin-top: var(--line-height);
-            }
+          details ::marker {
+            display: inline-block;
+            content: '▶';
+            margin: 0;
+          }
 
-            ul, ol {
-              padding: 0;
-              margin: 0 0 var(--line-height);
-            }
+          details[open] ::marker {
+            content: '▼';
+          }
 
-            ul {
-              list-style-type: square;
-              padding: 0 0 0 2ch;
-            }
-            ol {
-              list-style-type: none;
-              counter-reset: item;
-              padding: 0;
-            }
-            ol ul,
-            ol ol,
-            ul ol,
-            ul ul {
-              padding: 0 0 0 3ch;
-              margin: 0;
-            }
-            ol li:before { 
-              content: counters(item, ".") ". ";
-              counter-increment: item;
-              font-weight: var(--font-weight-medium);
-            }
+          details :last-child {
+            margin-bottom: 0;
+          }
 
-            li {
-              margin: 0;
-              padding: 0;
-            }
+          pre {
+            white-space: pre;
+            overflow-x: auto;
+            margin: var(--line-height) 0;
+            overflow-y: hidden;
+          }
 
-            li::marker {
-              line-height: 0;
-            }
+          figure pre {
+            margin: 0;
+          }
 
-            ::-webkit-scrollbar {
-                height: var(--line-height);
-            }
+          pre,
+          code {
+            font-family: var(--font-family);
+          }
 
-            input, button, textarea {
-              border: var(--border-thickness) solid var(--text-color);
-              padding: 
-                calc(var(--line-height) / 2 - var(--border-thickness))
-                calc(1ch - var(--border-thickness));
-              margin: 0;
-              font: inherit;
-              font-weight: inherit;
-              height: calc(var(--line-height) * 2);
-              width: auto;
-              overflow: visible;
-              background: var(--background-color);
-              color: var(--text-color);
-              line-height: normal;
-              -webkit-font-smoothing: inherit;
-              -moz-osx-font-smoothing: inherit;
-              -webkit-appearance: none;
-            }
+          code {
+            font-weight: var(--font-weight-medium);
+          }
 
-            input[type=checkbox],
-            input[type=radio] {
-              display: inline-grid;
-              place-content: center;
-              vertical-align: top;
-              width: 2ch;
-              height: var(--line-height);
-              cursor: pointer;
-            }
-            input[type=checkbox]:checked:before,
-            input[type=radio]:checked:before {
-              content: "";
-              width: 1ch;
-              height: calc(var(--line-height) / 2);
-              background: var(--text-color);
-            }
-            input[type=radio],
-            input[type=radio]:before {
-              border-radius: 100%;
-            }
+          figure {
+            margin: calc(var(--line-height) * 2) 3ch;
+            overflow-x: auto;
+            overflow-y: hidden;
+          }
 
-            button:focus, input:focus {
-              --border-thickness: 3px;
-              outline: none;
-            }
+          figcaption {
+            display: block;
+            font-style: italic;
+            margin-top: var(--line-height);
+          }
 
-            input {
-              width: calc(round(down, 100%, 1ch));
-            }
-            ::placeholder {
-              color: var(--text-color-alt);
-              opacity: 1;
-            }
-            ::-ms-input-placeholder {
-              color: var(--text-color-alt);
-            }
-            button::-moz-focus-inner {
-              padding: 0;
-              border: 0
-            }
+          ul,
+          ol {
+            padding: 0;
+            margin: 0 0 var(--line-height);
+          }
 
-            button {
-              text-transform: uppercase;
-              font-weight: var(--font-weight-medium);
-              cursor: pointer;
-            }
+          ul {
+            list-style-type: square;
+            padding: 0 0 0 2ch;
+          }
 
-            button:hover {
-              background: var(--background-color-alt);
-            }
-            button:active {
-              transform: translate(2px, 2px);
-            }
+          ol {
+            list-style-type: none;
+            counter-reset: item;
+            padding: 0;
+          }
 
-            label {
-              display: block;
-              width: calc(round(down, 100%, 1ch));
-              height: auto;
-              line-height: var(--line-height);
-              font-weight: var(--font-weight-medium);
-              margin: 0;
-            }
+          ol ul,
+          ol ol,
+          ul ol,
+          ul ul {
+            padding: 0 0 0 3ch;
+            margin: 0;
+          }
 
-            label input {
-              width: 100%;
-            }
+          ol li:before {
+            content: counters(item, ".") ". ";
+            counter-increment: item;
+            font-weight: var(--font-weight-medium);
+          }
 
-            .tree, .tree ul {
-              position: relative;
-              padding-left: 0;
-              list-style-type: none;
-              line-height: var(--line-height);
-            }
-            .tree ul {
-              margin: 0;
-            }
-            .tree ul li {
-              position: relative;
-              padding-left: 1.5ch;
-              margin-left: 1.5ch;
-              border-left: var(--border-thickness) solid var(--text-color);
-            }
-            .tree ul li:before {
-              position: absolute;
-              display: block;
-              top: calc(var(--line-height) / 2);
-              left: 0;
-              content: "";
-              width: 1ch;
-              border-bottom: var(--border-thickness) solid var(--text-color);
-            }
-            .tree ul li:last-child {
-              border-left: none;
-            }
-            .tree ul li:last-child:after {
-              position: absolute;
-              display: block;
-              top: 0;
-              left: 0;
-              content: "";
-              height: calc(var(--line-height) / 2);
-              border-left: var(--border-thickness) solid var(--text-color);
-            }
+          li {
+            margin: 0;
+            padding: 0;
+          }
 
-            .grid {
-              --grid-cells: 0;
-              display: flex;
-              gap: 1ch;
-              width: calc(round(down, 100%, (1ch * var(--grid-cells)) - (1ch * var(--grid-cells) - 1)));
-              margin-bottom: var(--line-height);
-            }
+          li::marker {
+            line-height: 0;
+          }
 
-            .grid > *,
-            .grid > input {
-              flex: 0 0 calc(round(down, (100% - (1ch * (var(--grid-cells) - 1))) / var(--grid-cells), 1ch));
-            }
-            .grid:has(> :last-child:nth-child(1)) { --grid-cells: 1; }
-            .grid:has(> :last-child:nth-child(2)) { --grid-cells: 2; }
-            .grid:has(> :last-child:nth-child(3)) { --grid-cells: 3; }
-            .grid:has(> :last-child:nth-child(4)) { --grid-cells: 4; }
-            .grid:has(> :last-child:nth-child(5)) { --grid-cells: 5; }
-            .grid:has(> :last-child:nth-child(6)) { --grid-cells: 6; }
-            .grid:has(> :last-child:nth-child(7)) { --grid-cells: 7; }
-            .grid:has(> :last-child:nth-child(8)) { --grid-cells: 8; }
-            .grid:has(> :last-child:nth-child(9)) { --grid-cells: 9; }
+          ::-webkit-scrollbar {
+            height: var(--line-height);
+          }
 
-            /* DEBUG UTILITIES */
+          input,
+          button,
+          textarea {
+            border: var(--border-thickness) solid var(--text-color);
+            padding:
+              calc(var(--line-height) / 2 - var(--border-thickness)) calc(1ch - var(--border-thickness));
+            margin: 0;
+            font: inherit;
+            font-weight: inherit;
+            height: calc(var(--line-height) * 2);
+            width: auto;
+            overflow: visible;
+            background: var(--background-color);
+            color: var(--text-color);
+            line-height: normal;
+            -webkit-font-smoothing: inherit;
+            -moz-osx-font-smoothing: inherit;
+            -webkit-appearance: none;
+          }
 
-            .debug .debug-grid {
-              --color: color-mix(in srgb, var(--text-color) 10%, var(--background-color) 90%);
-              position: absolute;
-              top: 0;
-              left: 0;
-              right: 0;
-              bottom: 0;
-              z-index: -1;
-              background-image:
-                repeating-linear-gradient(var(--color) 0 1px, transparent 1px 100%),
-                repeating-linear-gradient(90deg, var(--color) 0 1px, transparent 1px 100%);
-              background-size: 1ch var(--line-height);
-              margin: 0;
-            }
+          input[type=checkbox],
+          input[type=radio] {
+            display: inline-grid;
+            place-content: center;
+            vertical-align: top;
+            width: 2ch;
+            height: var(--line-height);
+            cursor: pointer;
+          }
 
-            .debug .off-grid {
-              background: rgba(255, 0, 0, 0.1);
-            }
+          input[type=checkbox]:checked:before,
+          input[type=radio]:checked:before {
+            content: "";
+            width: 1ch;
+            height: calc(var(--line-height) / 2);
+            background: var(--text-color);
+          }
 
-            .debug-toggle-label {
-              text-align: right;
-            }
-            .subtitle {
-              
-            }
+          input[type=radio],
+          input[type=radio]:before {
+            border-radius: 100%;
+          }
 
-          </style>
+          button:focus,
+          input:focus {
+            --border-thickness: 3px;
+            outline: none;
+          }
 
-          <!-- my custom styles -->
-          <style>
-            .skillsBlock img {
-              display: flex;
-              flex-direction: column;
-              margin: 0;
-              max-height: 40px;
-              width: 30px;
-            }
-            .skillsBlock {
-              /**
+          input {
+            width: calc(round(down, 100%, 1ch));
+          }
+
+          ::placeholder {
+            color: var(--text-color-alt);
+            opacity: 1;
+          }
+
+          ::-ms-input-placeholder {
+            color: var(--text-color-alt);
+          }
+
+          button::-moz-focus-inner {
+            padding: 0;
+            border: 0
+          }
+
+          button {
+            text-transform: uppercase;
+            font-weight: var(--font-weight-medium);
+            cursor: pointer;
+          }
+
+          button:hover {
+            background: var(--background-color-alt);
+          }
+
+          button:active {
+            transform: translate(2px, 2px);
+          }
+
+          label {
+            display: block;
+            width: calc(round(down, 100%, 1ch));
+            height: auto;
+            line-height: var(--line-height);
+            font-weight: var(--font-weight-medium);
+            margin: 0;
+          }
+
+          label input {
+            width: 100%;
+          }
+
+          .tree,
+          .tree ul {
+            position: relative;
+            padding-left: 0;
+            list-style-type: none;
+            line-height: var(--line-height);
+          }
+
+          .tree ul {
+            margin: 0;
+          }
+
+          .tree ul li {
+            position: relative;
+            padding-left: 1.5ch;
+            margin-left: 1.5ch;
+            border-left: var(--border-thickness) solid var(--text-color);
+          }
+
+          .tree ul li:before {
+            position: absolute;
+            display: block;
+            top: calc(var(--line-height) / 2);
+            left: 0;
+            content: "";
+            width: 1ch;
+            border-bottom: var(--border-thickness) solid var(--text-color);
+          }
+
+          .tree ul li:last-child {
+            border-left: none;
+          }
+
+          .tree ul li:last-child:after {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            content: "";
+            height: calc(var(--line-height) / 2);
+            border-left: var(--border-thickness) solid var(--text-color);
+          }
+
+          .grid {
+            --grid-cells: 0;
+            display: flex;
+            gap: 1ch;
+            width: calc(round(down, 100%, (1ch * var(--grid-cells)) - (1ch * var(--grid-cells) - 1)));
+            margin-bottom: var(--line-height);
+          }
+
+          .grid>*,
+          .grid>input {
+            flex: 0 0 calc(round(down, (100% - (1ch * (var(--grid-cells) - 1))) / var(--grid-cells), 1ch));
+          }
+
+          .grid:has(> :last-child:nth-child(1)) {
+            --grid-cells: 1;
+          }
+
+          .grid:has(> :last-child:nth-child(2)) {
+            --grid-cells: 2;
+          }
+
+          .grid:has(> :last-child:nth-child(3)) {
+            --grid-cells: 3;
+          }
+
+          .grid:has(> :last-child:nth-child(4)) {
+            --grid-cells: 4;
+          }
+
+          .grid:has(> :last-child:nth-child(5)) {
+            --grid-cells: 5;
+          }
+
+          .grid:has(> :last-child:nth-child(6)) {
+            --grid-cells: 6;
+          }
+
+          .grid:has(> :last-child:nth-child(7)) {
+            --grid-cells: 7;
+          }
+
+          .grid:has(> :last-child:nth-child(8)) {
+            --grid-cells: 8;
+          }
+
+          .grid:has(> :last-child:nth-child(9)) {
+            --grid-cells: 9;
+          }
+
+          /* DEBUG UTILITIES */
+
+          .debug .debug-grid {
+            --color: color-mix(in srgb, var(--text-color) 10%, var(--background-color) 90%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            background-image:
+              repeating-linear-gradient(var(--color) 0 1px, transparent 1px 100%),
+              repeating-linear-gradient(90deg, var(--color) 0 1px, transparent 1px 100%);
+            background-size: 1ch var(--line-height);
+            margin: 0;
+          }
+
+          .debug .off-grid {
+            background: rgba(255, 0, 0, 0.1);
+          }
+
+          .debug-toggle-label {
+            text-align: right;
+          }
+
+          .subtitle {}
+        </style>
+
+        <!-- my custom styles -->
+        <style>
+          .skillsBlock img {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            max-height: 40px;
+            width: 30px;
+          }
+
+          .skillsBlock {
+            /**
               border: solid 1px blue;
               */
-              display: flex;
-              flex-direction: row;
-              flex-wrap: wrap;
-              gap: 8px;
-              align-items: baseline;
-              justify-content: space-between;
-            }
-            .skillsBlock:hover {
-              border: solid 1px red;
-            }
-            .imgcont {
-              border: 1px solid var(--text-color);;
-              margin: 0;
-            }
-            .imgcont img {
-              width: unset;
-              margin: 0;
-            }
-            .statsBlock {
-              display: flex;
-              flex-direction: column;
-              gap: 20px;
-            }
-          </style>
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: baseline;
+            justify-content: space-between;
+          }
 
-          <!-- content -->
-          <body class='debug'>
-            <table class="header">
-              <tr>
-                <td colspan="2" rowspan="2" class="width-auto">
-                  <h1 class="title">Daniel Santa Rosa</h1>
-                  <span class="subtitle">computer engineer</span>
-                </td>
-                <th>Version</th>
-                <td class="width-min">v0.0.1</td>
-              </tr>
-              <tr>
-                <th>Updated</th>
-                <td class="width-min"><time style="white-space: pre;">22-03</time></td>
-              </tr>
-              <tr>
-                <th class="width-min" style="opacity: 0;">Author</th>
-                <td class="width-auto" style="opacity: 0;">
-                    <cite>
-                      Oskar Wickström
-                    </cite>
-                
-                </td>
-                <th class="width-min">License</th>
-                <td>MIT</td>
-              </tr>
-            </table>
+          .skillsBlock:hover {
+            border: solid 1px red;
+          }
 
-            <!--  -->
-            <label class="debug-toggle-label"><input type="checkbox" class="debug-toggle" /> Debug mode</label>
+          .imgcont {
+            border: 1px solid var(--text-color);
+            ;
+            margin: 0;
+          }
 
-            <!--  -->
-            <!-- <nav id="TOC" role="doc-toc"> -->
-            <h2 id="toc-title">Contents</h2>
+          .imgcont img {
+            width: unset;
+            margin: 0;
+          }
 
-            <!--  -->
-            <ul class="incremental">
-              <li><a href="#introduction" id="toc-introduction">Introduction</a></li>
-              <li><a href="#skills" id="toc-skills">Skills</a></li>
-              <li><a href="#my-stats" id="toc-lists">My Stats</a></li>
-              <!-- <li><a href="#tables" id="toc-my-stats">Tables</a></li>
+          .statsBlock {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+        </style>
+
+        <!-- content -->
+
+        <body class='debug'>
+          <table class="header">
+            <tr>
+              <td colspan="2" rowspan="2" class="width-auto">
+                <h1 class="title">Daniel Santa Rosa</h1>
+                <span class="subtitle">computer engineer</span>
+              </td>
+              <th>Version</th>
+              <td class="width-min">v0.0.1</td>
+            </tr>
+            <tr>
+              <th>Updated</th>
+              <td class="width-min"><time style="white-space: pre;">22-03</time></td>
+            </tr>
+            <tr>
+              <th class="width-min" style="opacity: 0;">Author</th>
+              <td class="width-auto" style="opacity: 0;">
+                <cite>
+                  Oskar Wickström
+                </cite>
+
+              </td>
+              <th class="width-min">License</th>
+              <td>MIT</td>
+            </tr>
+          </table>
+
+          <!--  -->
+          <label class="debug-toggle-label"><input type="checkbox" class="debug-toggle" /> Debug mode</label>
+
+          <!--  -->
+          <!-- <nav id="TOC" role="doc-toc"> -->
+          <h2 id="toc-title">Contents</h2>
+
+          <!--  -->
+          <ul class="incremental">
+            <li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+            <li><a href="#skills" id="toc-skills">Skills</a></li>
+            <li><a href="#my-stats" id="toc-lists">My Stats</a></li>
+            <!-- <li><a href="#tables" id="toc-my-stats">Tables</a></li>
               <li><a href="#forms" id="toc-forms">Forms</a></li>
               <li><a href="#grids" id="toc-grids">Grids</a></li>
               <li>
@@ -645,46 +799,45 @@
               </li>
               <li><a href="#media" id="toc-media">Media</a></li>
               <li><a href="#discussion" id="toc-discussion">Discussion</a></li> -->
-            </ul>
+          </ul>
 
-              <!--  -->
-            <h2 id="introduction">Introduction</h2>
-            <p>
-              Hi, I code 👁️👄👁️.
-            </p>
+          <!--  -->
+          <h2 id="introduction">Introduction</h2>
+          <p>
+            Hi, I code 👁️👄👁️.
+          </p>
 
-            <h2 id="my-stats">My Stats</h2>
+          <h2 id="my-stats">My Stats</h2>
 
-            
-          </body>
+
+        </body>
+
         </html>
-        </foreignObject>
-      </svg>
+      </foreignObject>
+    </svg>
 
-    </div>
-    <div style="display: flex; flex-direction: column;">
-      <picture style="max-width: 450px; ">
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-updated-five.vercel.app/api?username=DanielSRS&amp;count_private=true&amp;show_icons=true&amp;bg_color=00000000&amp;border_radius=0&amp;hide_border=false&amp;title_color=fff&amp;text_color=fff&amp;icon_color=fff&amp;line_height=25&amp;card_width=450px&amp;hide_title=false">
-      <img
-      align="left"
-      src="https://github-readme-stats-updated-five.vercel.app/api?username=DanielSRS&amp;count_private=true&amp;show_icons=true&amp;bg_color=00000000&amp;border_radius=0&amp;hide_border=false&amp;title_color=000&amp;text_color=000&amp;icon_color=000&amp;line_height=25&amp;card_width=450px&amp;hide_title=false"
-    />
-      </picture>
-      <picture style="align-self: flex-end;">
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-updated-five.vercel.app/api/top-langs/?username=DanielSRS&amp;layout=compact&amp;langs_count=10&amp;show_icons=true&amp;bg_color=00000000&amp;border_radius=0&amp;hide_border=false&amp;title_color=fff&amp;text_color=fff&amp;icon_color=fff&amp;card_width=450px&amp;line_height=25&amp;hide_title=false">
-      <img
-      align="right"
-      src="https://github-readme-stats-updated-five.vercel.app/api/top-langs/?username=DanielSRS&amp;layout=compact&amp;langs_count=10&amp;show_icons=true&amp;bg_color=00000000&amp;border_radius=0&amp;hide_border=false&amp;title_color=000&amp;text_color=000&amp;icon_color=000&amp;card_width=450px&amp;line_height=25&amp;hide_title=false"
-    />
-      </picture>
-      <picture style="max-width: 450px; ">
-        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-updated-five.vercel.app/api/wakatime?username=DanielSRS&range=last_7_days&langs_count=10&layout=compact&show_icons=true&bg_color=00000000&border_radius=0&hide_border=false&text_color=fff&icon_color=fff&card_width=450px&line_height=25&amp;title_color=fff&hide_title=false">
-        <img
-        align="left"
-        src="https://github-readme-stats-updated-five.vercel.app/api/wakatime?username=DanielSRS&range=last_7_days&langs_count=10&layout=compact&show_icons=true&bg_color=00000000&border_radius=0&hide_border=false&text_color=000&icon_color=000&card_width=450px&line_height=25&amp;title_color=000&hide_title=false"
-      />
-      </picture>
-    </div>
+  </div>
+  <div style="display: flex; flex-direction: column;">
+    <picture style="max-width: 450px; ">
+      <source media="(prefers-color-scheme: dark)"
+        srcset="https://github-readme-stats-updated-five.vercel.app/api?username=DanielSRS&amp;count_private=true&amp;show_icons=true&amp;bg_color=00000000&amp;border_radius=0&amp;hide_border=false&amp;title_color=fff&amp;text_color=fff&amp;icon_color=fff&amp;line_height=25&amp;card_width=450px&amp;hide_title=false">
+      <img align="left"
+        src="https://github-readme-stats-updated-five.vercel.app/api?username=DanielSRS&amp;count_private=true&amp;show_icons=true&amp;bg_color=00000000&amp;border_radius=0&amp;hide_border=false&amp;title_color=000&amp;text_color=000&amp;icon_color=000&amp;line_height=25&amp;card_width=450px&amp;hide_title=false" />
+    </picture>
+    <picture style="align-self: flex-end;">
+      <source media="(prefers-color-scheme: dark)"
+        srcset="https://github-readme-stats-updated-five.vercel.app/api/top-langs/?username=DanielSRS&amp;layout=compact&amp;langs_count=10&amp;show_icons=true&amp;bg_color=00000000&amp;border_radius=0&amp;hide_border=false&amp;title_color=fff&amp;text_color=fff&amp;icon_color=fff&amp;card_width=450px&amp;line_height=25&amp;hide_title=false">
+      <img align="right"
+        src="https://github-readme-stats-updated-five.vercel.app/api/top-langs/?username=DanielSRS&amp;layout=compact&amp;langs_count=10&amp;show_icons=true&amp;bg_color=00000000&amp;border_radius=0&amp;hide_border=false&amp;title_color=000&amp;text_color=000&amp;icon_color=000&amp;card_width=450px&amp;line_height=25&amp;hide_title=false" />
+    </picture>
+    <picture style="max-width: 450px; ">
+      <source media="(prefers-color-scheme: dark)"
+        srcset="https://github-readme-stats-updated-five.vercel.app/api/wakatime?username=DanielSRS&range=last_7_days&langs_count=10&layout=compact&show_icons=true&bg_color=00000000&border_radius=0&hide_border=false&text_color=fff&icon_color=fff&card_width=450px&line_height=25&amp;title_color=fff&hide_title=false">
+      <img align="left"
+        src="https://github-readme-stats-updated-five.vercel.app/api/wakatime?username=DanielSRS&range=last_7_days&langs_count=10&layout=compact&show_icons=true&bg_color=00000000&border_radius=0&hide_border=false&text_color=000&icon_color=000&card_width=450px&line_height=25&amp;title_color=000&hide_title=false" />
+    </picture>
+  </div>
 
-  </body>
-</html> 
+</body>
+
+</html>
