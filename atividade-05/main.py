@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 
 
 def generateWebsiteHtml(data):
-    html = "<html><head><title>Atividade 05</title></head><body>"
+    html = "<html><head><meta charset='UTF-8'> <!-- Defines UTF-8 encoding --><title>Atividade 05</title></head><body>"
     html += "<h1>Atividade 05</h1>"
     html += "<table border='1'><tr><th>Título</th><th>Imagem</th></tr>"
     for title, imgsrc in data:
