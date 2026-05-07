@@ -1,0 +1,61 @@
+Pular para o conteúdo principal Google Sala de Aula Sala de Aula EXA618:
+Programação para Redes 2026.1 Início Agenda Minhas inscrições Pendentes L Libras
+- T 18 2026.1 Engenharia E EXA618: Programação para Redes 2026.1 T TEC 433 -
+Formação e Visualização de Imagens Digitais 2023.2 2 2023.2 Jogos Digitais S
+SISTEMAS OPERACIONAIS 2023.1 T TEC499-TP01(2022.2) A Algoritmos e Programação II
+- 2021.2 P PCGeral - 2020.1 Princípios de Contabilidade Geral E EXA 705 E
+Estruturas de Dados - 2019.2 E EXA 705 T03 2019.1 T TFH 2018.1 T TFC 2019.1 T
+TEC503-T03_2018.1 E EXA801-T01_2018.1 Turmas arquivadas Configurações Detalhes
+da atividade assignment Atividade 2.4: JavaScript João Rocha • 16:03 10 pontos
+Atualize o arquivo Blog.html (em anexo) para obter as mensagens armazenadas na
+planilha e exibi-las dinamicamente na página utilizando requisições AJAX. Todas
+as mensagens devem ser inseridas na div id="messages">. A atualização do
+conteúdo deve ocorrer sem recarregar a página. Envie o arquivo Blog.html
+modificado. Blog.html HTML Comentários da turma Seus trabalhos Atribuído
+Comentários particulares
+<html>
+  <head>
+    <title>My Blog</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/javascript">
+      function send(event) {
+        data = {
+          message: document.getElementById("msg").value,
+          author: document.getElementById("autor").value,
+        };
+        var json_data = JSON.stringify(data);
+
+        var header = {
+          "Content-Type": "application/json",
+        };
+
+        var url =
+          "https://script.google.com/macros/s/AKfycbzBn3sALe1rYjz7Ze-Ik7q9TEVP0I2V3XX7GNcecWP8NvCzGt4yO_RT1OlQp09TE9cU/exec";
+
+        fetch(url, {
+          method: "POST",
+          body: json_data,
+          headers: header,
+          mode: "no-cors",
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1 align="center">Mensagem:</h1>
+    <hr />
+    <br />
+    <form>
+      <label>Mensagem:</label>
+      <input type="text" size="64" name="msg" id="msg" /><br /><br />
+      <label>Autor:</label>
+      <input type="text" size="64" name="autor" id="autor" />
+      <br /><br />
+      <button type="button" onclick="send()">Enviar</button>
+    </form>
+    <hr />
+    <h2>Mensagens:</h2>
+    <div id="messages"></div>
+  </body>
+</html>
+Blog.html Exibindo Blog.html…
