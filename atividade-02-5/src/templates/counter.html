@@ -15,6 +15,27 @@
   </head>
   <body>
     <h1>Visit Counter</h1>
+    <p>{{ saudation }}</p>
     <p>You have visited this page {{ count }} times.</p>
+
+    <!-- Check if 'name' is missing, empty, or None -->
+    {% if not name %}
+
+    <div>
+      <p>Welcome, guest! We don't have your name yet.</p>
+      <form action="{{ url_for('process_name') }}" method="post">
+        <input type="text" placeholder="Enter your name" name="user_name" />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    {% else %}
+
+    <div>
+      <p>Welcome back, {{ name }}!</p>
+    </div>
+
+    {% endif %}
+    <!-- Always remember to close your if statements! -->
   </body>
 </html>
