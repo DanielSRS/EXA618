@@ -2,30 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { LoadingIndicator } from "./loading-indicator";
 import { PostItem } from "./post-item";
-
-interface SearchBoxProps {
-  onSearch: (searchTerm: string) => void;
-}
-
-function SearchBox(props: SearchBoxProps) {
-  return (
-    <input
-      type="text"
-      className="line"
-      style={{
-        minHeight: "40x",
-        minWidth: "250px",
-        border: "1px solid blue",
-        padding: "8px",
-        paddingLeft: "16px",
-        paddingRight: "16px",
-        borderRadius: "8px",
-      }}
-      onChange={(e) => props.onSearch(e.target.value ?? "")}
-      placeholder="Search.."
-    />
-  );
-}
+import { SearchBox } from "./search-box";
 
 const POSTS_URL =
   "https://script.google.com/macros/s/AKfycbzBn3sALe1rYjz7Ze-Ik7q9TEVP0I2V3XX7GNcecWP8NvCzGt4yO_RT1OlQp09TE9cU/exec";
@@ -74,39 +51,12 @@ export function SearchPosts() {
       }}
     >
       {/* Header */}
-      <div
-        style={{
-          // border: "1px solid green",
-          width: "100%",
-          // height: "76px",
-          justifyContent: "center",
-          alignItems: "center",
-          display: "flex",
-          // flexDirection: "column",
-          paddingTop: "16px",
-          paddingBottom: "8px",
-        }}
-      >
+      <Header>
         {/* Search box */}
         <SearchBox onSearch={setSearchTerm} />
-      </div>
+      </Header>
       {/* Posts area */}
-      <div
-        className="line"
-        style={{
-          // border: "3px solid orange",
-          borderTop: "2px solid #000",
-          flex: 1,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: isLoading ? "center" : undefined,
-          alignItems: "center",
-          scrollBehavior: "smooth",
-          overflowY: "scroll",
-          padding: "16px",
-          gap: "8px",
-        }}
-      >
+      <PostsContainer isLoading={isLoading}>
         {/* Posts will be rendered here */}
         {!isLoading &&
           filteredPosts?.map(([message, author, date], index) => (
@@ -118,7 +68,53 @@ export function SearchPosts() {
             />
           ))}
         <LoadingIndicator shown={isLoading} />
-      </div>
+      </PostsContainer>
+    </div>
+  );
+}
+
+function Header(props: { children: React.ReactNode }) {
+  return (
+    <div
+      style={{
+        // border: "1px solid green",
+        width: "100%",
+        // height: "76px",
+        justifyContent: "center",
+        alignItems: "center",
+        display: "flex",
+        // flexDirection: "column",
+        paddingTop: "16px",
+        paddingBottom: "8px",
+      }}
+    >
+      {props.children}
+    </div>
+  );
+}
+
+function PostsContainer(props: {
+  children: React.ReactNode;
+  isLoading: boolean;
+}) {
+  return (
+    <div
+      className="line"
+      style={{
+        // border: "3px solid orange",
+        borderTop: "2px solid #000",
+        flex: 1,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: props.isLoading ? "center" : undefined,
+        alignItems: "center",
+        scrollBehavior: "smooth",
+        overflowY: "scroll",
+        padding: "16px",
+        gap: "8px",
+      }}
+    >
+      {props.children}
     </div>
   );
 }
