@@ -29,3 +29,8 @@ body {
 .line {
   border-color: var(--foreground) !important;
 }
+
+/* scrooll aparence. remove backgorund and indicators */
+::-webkit-scrollbar {
+  background-color: #00000000;
+}
