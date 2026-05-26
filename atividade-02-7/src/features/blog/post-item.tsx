@@ -6,26 +6,27 @@ export function PostItem(props: {
   return (
     <div
       style={{
-        border: "1px solid blue",
+        border: "2px solid black",
         padding: "16px",
-        borderRadius: "8px",
+        // borderRadius: "8px",
         display: "flex",
         flexDirection: "column",
         maxWidth: "600px",
         width: "100%",
       }}
+      className="line"
     >
       <p style={{}}>{props.message}</p>
       <div
         style={{
           display: "flex",
           flexDirection: "row",
-          gap: "24px",
+          justifyContent: "space-between",
         }}
       >
         <p style={{}}>@{props.author}</p>
         <span style={{ fontSize: "12px", color: "#666" }}>
-          {new Date(props.date).toLocaleString()}
+          {new Date(props.date).toLocaleString("pt-br")}
         </span>
       </div>
     </div>

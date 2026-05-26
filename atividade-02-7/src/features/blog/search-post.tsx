@@ -11,6 +11,7 @@ function SearchBox(props: SearchBoxProps) {
   return (
     <input
       type="text"
+      className="line"
       style={{
         minHeight: "40x",
         minWidth: "250px",
@@ -67,7 +68,7 @@ export function SearchPosts() {
     <div
       className="flex flex-col"
       style={{
-        border: "1px solid red",
+        // border: "1px solid red",
         flex: 1,
         maxHeight: "100vh",
       }}
@@ -75,7 +76,7 @@ export function SearchPosts() {
       {/* Header */}
       <div
         style={{
-          border: "1px solid green",
+          // border: "1px solid green",
           width: "100%",
           // height: "76px",
           justifyContent: "center",
@@ -91,8 +92,10 @@ export function SearchPosts() {
       </div>
       {/* Posts area */}
       <div
+        className="line"
         style={{
-          border: "3px solid orange",
+          // border: "3px solid orange",
+          borderTop: "2px solid #000",
           flex: 1,
           display: "flex",
           flexDirection: "column",
