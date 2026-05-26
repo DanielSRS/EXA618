@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { LoadingIndicator } from "./loading-indicator";
 import { PostItem } from "./post-item";
 import { SearchBox } from "./search-box";
+import { TableHeader } from "./table-header";
 
 const POSTS_URL =
   "https://script.google.com/macros/s/AKfycbzBn3sALe1rYjz7Ze-Ik7q9TEVP0I2V3XX7GNcecWP8NvCzGt4yO_RT1OlQp09TE9cU/exec";
@@ -58,6 +59,7 @@ export function SearchPosts() {
       {/* Posts area */}
       <PostsContainer isLoading={isLoading}>
         {/* Posts will be rendered here */}
+        {!isLoading && <TableHeader />}
         {!isLoading &&
           filteredPosts?.map(([message, author, date], index) => (
             <PostItem

@@ -1,12 +1,8 @@
-export function PostItem(props: {
-  author: string;
-  message: string;
-  date: string;
-}) {
+export function TableHeader() {
   return (
     <div
       style={{
-        border: "1px solid black",
+        // border: "2px solid black",
         borderTop: 0,
         borderLeft: 0,
         borderRight: 0,
@@ -16,6 +12,7 @@ export function PostItem(props: {
         flexDirection: "row",
         maxWidth: "600px",
         width: "100%",
+        paddingBottom: "8px",
       }}
       className="line"
     >
@@ -24,14 +21,14 @@ export function PostItem(props: {
           flex: 1,
         }}
       >
-        {props.author}
+        {"Author"}
       </p>
       <p
         style={{
           flex: 2,
         }}
       >
-        {props.message}
+        {"Message"}
       </p>
       <div
         style={{
@@ -41,9 +38,7 @@ export function PostItem(props: {
           justifyContent: "space-between",
         }}
       >
-        <span style={{ fontSize: "12px", color: "#666" }}>
-          {new Date(props.date).toLocaleString("pt-br")}
-        </span>
+        <span style={{ fontSize: "12px", color: "#666" }}>{"Date"}</span>
       </div>
     </div>
   );
